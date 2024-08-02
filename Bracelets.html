@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRACELETS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italianno&display=swap"> -->
+  </head>
+
+  <body>
+    <header>
+
+      <h5 style="text-align: center; "><p style="margin: auto;">FREE SHIPPING OVER $25 & LOCAL PICKUP AVAILABLE</p>
+        <div class="top" >
+          <button type="button" id="cartButton" class="cart-button">
+            <img width="22px" src="icons/cart-shopping-solid.svg" alt="Cart icon">
+          </button>
+          <button type="button" id="profileButton" onclick="showSignupPopup()" class="profile-button">
+            <img
+              style="margin-right: 10px"
+              width="20px"
+              src="icons/user-regular.svg"
+              alt="Profile"
+            />
+          </button>
+          <div id="signupPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="hideSignupPopup()">&times;</span>
+                <h2>Sign Up</h2>
+                <form id="signupForm" onsubmit="handleSignup(event)">
+                    <input type="email" id="email" placeholder="Email/ Username" required><br>
+                    <br>
+                    <input type="password" id="password" placeholder="Password" required><br>
+                    <br>
+                    <br>
+                    <button id="signupBUtton" type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+       
+        </div>
+        <br>
+        <p id="logoImg">
+          <img   id="logo"  src="logoo.png" alt="logo" />
+        </p>
+          
+      
+      </h5>
+      <div class="navbar">
+        <nav>
+          <ul>
+            <li><a href="home.html" id="homeLink">NEW ARRIVALS</a></li>
+            <li><a href="product.html" id="productLink">SHOP BY</a></li>
+            <li><a href="Necklace.html" id="neckLink">NECKLACES</a></li>
+            <li><a href="Earings.html" id="earingLink">EARINGS</a></li>
+            <li><a href="Bracelets.html" id="braceletLink">BRACELETS</a></li>
+            <li><a href="Rings.html" id="ringLink">RINGS</a></li>
+            <li><a href="About.html" id="aboutLink">ABOUT</a></li>
+            <li><a href="contact.html" id="contactLink">CONTACT</a></li>
+            <li style="float: right; margin: 0px;">
+              <div class="search-wrapper">
+                <div id="searchContainer" class="search-container" style="display: none;">
+                  <input type="text" id="search-input" placeholder="Search our products.">
+                </div>
+                <button id="searchButton" class="search-button" onclick="toggleSearch()">
+                  <img width="14px" src="icons/magnifying-glass-solid.svg" alt="Search icon">
+                </button>
+               
+              </div></li>
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="content-section">
+      <div class="container">
+        <h3>BRACELETS</h3>
+        <div class="category">
+          <div class="product">
+            <img src="bracelets/b1.jpg" alt="Bracelet 1" />
+
+            <p class="price">$1500</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 1', 1000)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="bracelets/b2.jpg" alt="Bracelet 2" />
+
+            <p class="price">$1300</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 2', 1300)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="bracelets/b3.jpg" alt="Bracelet 3" />
+
+            <p class="price">$940</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 3', 24,240)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="bracelets/b4.jpg" alt="Bracelet 4" />
+
+            <p id="three" class="price">$1000</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 4', 1000)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="bracelets/b5.jpg" alt="Bracelet 5" />
+
+            <p class="price">$1400</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 5', 12000)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="bracelets/b6.jpg" alt="Bracelet 6" />
+
+            <p class="price">$1100</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 6', 12000)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="bracelets/b7.jpg" alt="Bracelet 7" />
+
+            <p class="price">$2000</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 7', 12000)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="bracelets/b8.jpg" alt="Bracelet 8" />
+
+            <p class="price">$1200</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 8', 12000)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="bracelets/b9.jpg" alt="Bracelet 9" />
+
+            <p class="price">$1500</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 9', 12000)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="bracelets/b10.jpg" alt="Bracelet 10" />
+
+            <p class="price">$1800</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 10', 12000)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="bracelets/b11.jpg" alt="Bracelet 11" />
+
+            <p class="price">$1600</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 11', 12000)"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footerContainer">
+        <div class="innerFooter">
+          <div id="f">
+            <h1>NEWSLETTER</h1>
+            <br />
+
+            <p>
+              Join our mailing list to recieve updates,<br />
+              access exclusive sales and more
+            </p>
+
+            <input
+              type="email"
+              name="Email"
+              class="email-input"
+              placeholder="Enter your email address"
+            />
+            <br /><br />
+            <input type="button" value="subscribe" class="subscribe-button" />
+          </div>
+          <div id="f2">
+            <h5>HELP</h5>
+            <ul>
+              <li>FAQ</li>
+              <li>SHIPPING POLICY</li>
+              <li>REFUND POLICY</li>
+              <li>WHOLESALE INQUIRIES</li>
+              <li>PRIVACY POLICIES</li>
+              <li>TERMS OF SERVICE</li>
+            </ul>
+          </div>
+          <div id="f3">
+            <h5>SOCIAL</h5>
+
+            <a href="#" target="_blank" rel="pinterest">
+              <img
+                src="icons/pinterest-brands-solid.svg"
+                alt="Pinterest Icon"
+              />
+            </a>
+            <a href="#" target="_blank" rel="facebook">
+              <img src="icons/facebook-brands-solid.svg" alt="Facebook Icon" />
+            </a>
+            <a href="#" target="_blank" rel="instagram">
+              <img
+                src="icons/instagram-brands-solid.svg"
+                alt="Instagram Icon"
+              />
+            </a>
+          </div>
+        </div>
+
+        <p>&copy; 2024 Jewelry Store. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

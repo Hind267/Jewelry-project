@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRODUCT</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+
+      <h5 style="text-align: center; "><p style="margin: auto;">FREE SHIPPING OVER $25 & LOCAL PICKUP AVAILABLE</p>
+        <div class="top" >
+          <button type="button" id="cartButton" class="cart-button">
+            <img width="22px" src="icons/cart-shopping-solid.svg" alt="Cart icon">
+          </button>
+          <button type="button" id="profileButton" onclick="showSignupPopup()" class="profile-button">
+            <img
+              style="margin-right: 10px"
+              width="20px"
+              src="icons/user-regular.svg"
+              alt="Profile"
+            />
+          </button>
+          <div id="signupPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="hideSignupPopup()">&times;</span>
+                <h2>Sign Up</h2>
+                <form id="signupForm" onsubmit="handleSignup(event)">
+                    <input type="email" id="email" placeholder="Email/ Username" required><br>
+                    <br>
+                    <input type="password" id="password" placeholder="Password" required><br>
+                    <br>
+                    <br>
+                    <button id="signupBUtton" type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+       
+        </div>
+        <br>
+        <p id="logoImg">
+          <img   id="logo"  src="logoo.png" alt="logo" />
+        </p>
+          
+      
+      </h5>
+      <div class="navbar">
+        <nav>
+          <ul>
+            <li><a href="home.html" id="homeLink">NEW ARRIVALS</a></li>
+            <li><a href="product.html" id="productLink">SHOP BY</a></li>
+            <li><a href="Necklace.html" id="neckLink">NECKLACES</a></li>
+            <li><a href="Earings.html" id="earingLink">EARINGS</a></li>
+            <li><a href="Bracelets.html" id="braceletLink">BRACELETS</a></li>
+            <li><a href="Rings.html" id="ringLink">RINGS</a></li>
+            <li><a href="About.html" id="aboutLink">ABOUT</a></li>
+            <li><a href="contact.html" id="contactLink">CONTACT</a></li>
+            <li style="float: right; margin: 0px;">
+              <div class="search-wrapper">
+                <div id="searchContainer" class="search-container" style="display: none;">
+                  <input type="text" id="search-input" placeholder="Search our products.">
+                </div>
+                <button id="searchButton" class="search-button" onclick="toggleSearch()">
+                  <img width="14px" src="icons/magnifying-glass-solid.svg" alt="Search icon">
+                </button>
+               
+              </div></li>
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="content-section">
+      <div class="container">
+        <h2 style="color: ae9880;">Women's Jewellery</h2>
+        <!-- Ring -->
+        <div class="category">
+          <h3>Rings</h3>
+          <div class="product">
+            <img src="Rings/r1.jpg" alt="Ring 1" />
+            <p class="price">$400</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Ring 1', 120)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="Rings/r2.jpg" alt="Ring 2" />
+            <p class="price">$1800</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Ring 2', 180)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="Rings/r3.jpg" alt="Ring 3" />
+            <p class="price">$600</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Ring 3', 200)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="Rings/r4.jpg" alt="Ring 4" />
+            <p class="price">$3000</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Ring 4', 90)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="Rings/r5.jpg" alt="Ring 5" />
+            <p class="price">$2270</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Ring 5', 270)"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- ! Bracelets  -->
+        <div class="category">
+          <h3>Bracelets</h3>
+          <div class="product">
+            <img src="bracelets/b1.jpg" alt="Bracelet 1" />
+
+            <p class="price">$18000</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 1', 18000)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="bracelets/b2.jpg" alt="Bracelet 2" />
+
+            <p class="price">$10200</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 2', 10200)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="bracelets/b3.jpg" alt="Bracelet 3" />
+
+            <p class="price">$24,540</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 3', 24,540)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="bracelets/b4.jpg" alt="Bracelet 4" />
+
+            <p id="three" class="price">$4000</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 4', 4000)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="bracelets/b5.jpg" alt="Bracelet 5" />
+
+            <p class="price">$12000</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 5', 12000)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="bracelets/b6.jpg" alt="Bracelet 6" />
+
+            <p class="price">$12000</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Bracelet 6', 12000)"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Earrings -->
+        <div class="category">
+          <h3>Earrings</h3>
+          <div class="product">
+            <img src="Earings/e1.jpg" alt="Earring 1" />
+
+            <p class="price">$2500</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Earring 1', 2500)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="Earings/e2.jpg" alt="Earring 2" />
+
+            <p class="price">$1000</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Earring 2', 1000)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="Earings/e3.jpg" alt="Earring 3" />
+
+            <p class="price">$1500</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Earring 3', 1500)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="Earings/e4.jpg" alt="Earring 4" />
+
+            <p class="price">$2800</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Earring 4', 2800)"
+            >
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product">
+            <img src="Earings/e5.jpg" alt="Earring 5" />
+
+            <p class="price">$4000</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Earring 5', 4000)"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <!-- Neckles -->
+        <div class="category">
+          <h3>Necklaces</h3>
+          <div class="product">
+            <img src="necklaces/n1.jpg" alt="Necklace 1" />
+
+            <p class="price">$45</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Necklace 1', 45)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="necklaces/n2.jpg" alt="Necklace 2" />
+
+            <p class="price">$45</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Necklace 2', 45)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="necklaces/n3.jpg" alt="Necklace 3" />
+
+            <p class="price">$45</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Necklace 3', 45)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="necklaces/n4.jpg" alt="Necklace 4" />
+
+            <p class="price">$45</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Necklace 4', 45)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="necklaces/n5.jpg" alt="Necklace 5" />
+
+            <p class="price">$45</p>
+            <button
+              class="add-to-cart-button"
+              onclick="addToCart('Necklace 5', 45)"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footerContainer">
+        <div class="innerFooter">
+          <div id="f">
+            <h1>NEWSLETTER</h1>
+            <br />
+
+            <p>
+              Join our mailing list to recieve updates,<br />
+              access exclusive sales and more
+            </p>
+
+            <input
+              type="email"
+              name="Email"
+              class="email-input"
+              placeholder="Enter your email address"
+            />
+            <br /><br />
+            <input type="button" value="subscribe" class="subscribe-button" />
+          </div>
+          <div id="f2">
+            <h5 style="text-align: center;">HELP</h5>
+            <ul>
+              <li>FAQ</li>
+              <li>SHIPPING POLICY</li>
+              <li>REFUND POLICY</li>
+              <li>WHOLESALE INQUIRIES</li>
+              <li>PRIVACY POLICIES</li>
+              <li>TERMS OF SERVICE</li>
+            </ul>
+          </div>
+          <div id="f3">
+            <h5>SOCIAL</h5>
+
+            <a href="#" target="_blank" rel="pinterest">
+              <img
+                src="icons/pinterest-brands-solid.svg"
+                alt="Pinterest Icon"
+              />
+            </a>
+            <a href="#" target="_blank" rel="facebook">
+              <img src="icons/facebook-brands-solid.svg" alt="Facebook Icon" />
+            </a>
+            <a href="#" target="_blank" rel="instagram">
+              <img
+                src="icons/instagram-brands-solid.svg"
+                alt="Instagram Icon"
+              />
+            </a>
+          </div>
+        </div>
+
+        <p>&copy; 2024 Jewelry Store. All rights reserved.</p>
+      </div>
+
+    </footer>
+  </body>
+</html>
